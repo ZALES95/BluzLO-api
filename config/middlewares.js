@@ -9,11 +9,4 @@ module.exports = [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
-  {
-    name: "strapi::cors",
-    enabled: true,
-    params: {
-      origin: ["https://bluzlo.pl"],
-    },
-  },
 ];

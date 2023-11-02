@@ -45,6 +45,24 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         success_url: process.env.CLIENT_URL + "?success=true",
         cancel_url: process.env.CLIENT_URL + "?success=false",
         line_items: lineItems,
+        custom_fields: [
+          {
+            key: "fullName",
+            label: {
+              type: "custom",
+              custom: "Imię i nazwisko",
+            },
+            type: "text",
+          },
+          {
+            key: "phoneNumber",
+            label: {
+              type: "custom",
+              custom: "Numer telefonu",
+            },
+            type: "numeric",
+          },
+        ],
       });
 
       await strapi
